@@ -14,6 +14,7 @@
     "build:tsoa": "yarn tsoa spec-and-routes",
     "build": "tsc -p tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "clean": "rimraf dist && rimraf src/common/routes.ts",
+    "prebuild": "yarn build:routes",
     "pretest": "yarn build:routes",
     "test": "jest --coverage"
   },
